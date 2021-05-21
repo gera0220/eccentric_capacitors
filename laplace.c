@@ -12,7 +12,7 @@ int main(int argc, char **args){
     //Guardar datos en laplace.dat
     FILE *output, *output2;			
     output = fopen("laplace.dat", "w");
-    output2 = fopen("heatmap/laplace.csv", "w");
+    output2 = fopen("laplace.csv", "w");
 
     printf("Ingresa el número de saltos en x: ");
     scanf("%d", &cols);
