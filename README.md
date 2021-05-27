@@ -1,1 +1,1 @@
-# eccentric_capacitors
+![](poster.jpg)
