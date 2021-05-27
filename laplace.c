@@ -8,8 +8,6 @@ void **ecuacion_laplace(int, int, double **);
 double transformada(double, double, double, double);
 double valor_z(double, double);
 void condiciones_capacitores(double, double);
-void mostrar_matriz(int, int, double **);
-void llenar_matriz(int, int, double **);
 
 int main(int argc, char **args){
     int filas, cols;
@@ -107,22 +105,5 @@ void **ecuacion_laplace(int filas, int cols, double **u){
                 u[i][j] = 0.25 * (u[i+1][j] + u[i-1][j] + u[i][j+1] + u[i][j-1]);
             }
         } 
-    }
-}
-
-void mostrar_matriz(int filas, int columnas, double **u_inversa){
-    for(int i = 0; i < filas; i++){
-        for(int j = 0; j < columnas; j++){
-            printf("\t%7.2lf", u_inversa[i][j]);
-        }
-    putchar('\n');
-    }
-}
-
-void llenar_matriz(int filas, int columnas, double **v){
-    for(int i = 0; i < filas; i++){
-        for(int j = 0; j < columnas; j++){
-            v[i][j] = 0;
-        }
     }
 }
